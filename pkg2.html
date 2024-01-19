@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Packages</title>
+    <link rel="stylesheet" href="pkg2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Dai+Banna+SIL:wght@300&family=Josefin+Sans:wght@300&family=Merriweather:ital,wght@1,700&family=Noto+Serif+Vithkuqi&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@300&family=REM:wght@200&family=Roboto+Condensed:wght@300&family=Ubuntu&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bodyCont mx-auto mt-5">
+        <div class="row mx-auto">
+            <div class="col">
+                <ul class="list-unstyled listPKG">
+                    <li><a id="callPKG1">1. 2000 onn-net mins @Rs 500</a></li>
+                    <li><a id="callPKG2">2. 500 offnet mins @Rs 278</a></li>
+                    <li><a id="callPKG3">3. weekly 100 mins @Rs 300</a></li>
+                    <li><a id="callPKG4">4. daily 30 mins @Rs 5</a></li>
+                    <li><a id="callPKG5">5. monthly 80 mins @Rs 100</a></li>
+                </ul>
+            </div>
+            <p id="resultPKG"></p>
+            <p>Remaining Balance: <span id="remBlc">500</span> Rs</p>
+        </div>
+        <a class="goBack" href="/pkg.html">Go back</a>
+    </div>
+    <script>
+        const greenResult = "Congratulations! Package successfully subscribed";
+        const redResult = "You have insufficient balance! Please recharge to use more services";
+        let RemainingBlc = document.querySelector("#remBlc");
+        let remBalance = 500;
+        const callPkg1 = document.querySelector("#callPKG1");
+        callPkg1.addEventListener("click", () => {
+            const resultPKG = document.querySelector("#resultPKG");
+            if (remBalance >= 500) {
+                resultPKG.innerHTML = greenResult;
+                resultPKG.classList.add("resultPKG2")
+                remBalance = remBalance - 500;
+                RemainingBlc.innerHTML = remBalance;
+            }
+            else {
+                resultPKG.innerHTML = redResult;
+                resultPKG.classList.remove("resultPKG2")
+                resultPKG.classList.add("resultPKG1")
+            }
+
+        })
+
+        const callPkg2 = document.querySelector("#callPKG2");
+        callPkg2.addEventListener("click", () => {
+            const resultPKG = document.querySelector("#resultPKG");
+            if (remBalance >= 278) {
+                resultPKG.innerHTML = greenResult;
+                resultPKG.classList.add("resultPKG2")
+                remBalance = remBalance - 278;
+                RemainingBlc.innerHTML = remBalance;
+            }
+            else {
+                resultPKG.innerHTML = redResult;
+                resultPKG.classList.remove("resultPKG2")
+                resultPKG.classList.add("resultPKG1")
+            }
+        })
+
+        const callPkg3 = document.querySelector("#callPKG3");
+        callPkg3.addEventListener("click", () => {
+            const resultPKG = document.querySelector("#resultPKG");
+            if (remBalance >= 300) {
+                resultPKG.innerHTML = greenResult;
+                resultPKG.classList.add("resultPKG2")
+                remBalance = remBalance - 300;
+                RemainingBlc.innerHTML = remBalance;
+            }
+            else {
+                resultPKG.innerHTML = redResult;
+                resultPKG.classList.remove("resultPKG2")
+                resultPKG.classList.add("resultPKG1")
+            }
+        })
+
+        const callPkg4 = document.querySelector("#callPKG4");
+        callPkg4.addEventListener("click", () => {
+            const resultPKG = document.querySelector("#resultPKG");
+            if (remBalance >= 5) {
+                resultPKG.innerHTML = greenResult;
+                resultPKG.classList.add("resultPKG2")
+                remBalance = remBalance - 5;
+                RemainingBlc.innerHTML = remBalance;
+            }
+            else {
+                resultPKG.innerHTML = redResult;
+                resultPKG.classList.remove("resultPKG2")
+                resultPKG.classList.add("resultPKG1")
+            }
+        })
+
+        const callPkg5 = document.querySelector("#callPKG5");
+        callPkg5.addEventListener("click", () => {
+            const resultPKG = document.querySelector("#resultPKG");
+            if (remBalance >= 100) {
+                resultPKG.innerHTML = greenResult;
+                resultPKG.classList.add("resultPKG2")
+                remBalance = remBalance - 100;
+                RemainingBlc.innerHTML = remBalance;
+            }
+            else {
+                resultPKG.innerHTML = redResult;
+                resultPKG.classList.remove("resultPKG2")
+                resultPKG.classList.add("resultPKG1")
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>

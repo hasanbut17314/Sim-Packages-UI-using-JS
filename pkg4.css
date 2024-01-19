@@ -1,0 +1,62 @@
+.bodyCont {
+    background-color: #000000;
+    color: #f0f0f0;
+    height: 500px;
+    max-width: 30%;
+    border-radius: 4px;
+}
+
+.listPKG {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.listPKG li {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.listPKG li a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.col p {
+    font-family: 'REM', sans-serif;
+}
+
+@media screen and (max-width: 790px) {
+    .bodyCont {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .bodyCont {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .bodyCont {
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+.resultPKG1 {
+    color: red;
+}
+
+.resultPKG2 {
+    color: green;
+}
+
+.goBack {
+    background-color: #f0f0f0;
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+    width: 30%;
+}
